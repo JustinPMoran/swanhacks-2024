@@ -6,6 +6,37 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'GibraltEL';
+    src: url('fonts/GibraltDEMO-ExtraLight.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.inactiveFont {
+    font-family: 'GibraltEL', sans-serif;
+    font-size: 3vh !important;
+    color: rgb(33, 33, 33);
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.nav-item {
+    margin-right: 100px;
+}
+
+
+.activeFont {
+    font-family: 'GibraltEL', sans-serif;
+    font-size: 3vh !important;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+}
+
 .logoNAV {
     font-family: 'Gibralt', sans-serif;
     font-weight: bold;
@@ -76,12 +107,23 @@
     z-index: 1;
 }
 
+.screeners {
+    width: 32px;
+    position: fixed;
+    bottom: 6px;
+    left: 6px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1px;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
 .buttonYellow {
     background-color: rgba(255, 255, 255, 0);
     color: black;
     outline: none;
     font-weight: bolder;
-    border: solid 4px black;
+    border: solid 2px black;
     border-radius: 10px;
     padding: 10px;
     transition: all 0.2s ease;

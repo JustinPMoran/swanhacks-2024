@@ -13,36 +13,6 @@
 </head>
 
 <body style="margin: 0; overflow: hidden;">
-    <nav class="navbar navbar-expand-lg navbar-light blurred-nav">
-        <div class="container-fluid">
-            <img class="logoBox" src="images/image (2).png">
-            <!-- <a class="logoNAV logoNAV_B" href="index.html">AR</a><a class="logoNAV logoNAV_S" href="index.html">u</a><a class="logoNAV logoNAV_B" href="index.html">Learning</a> -->
-            <a class="logoNAV logoNAV_B" href="index.html">ARuLearning</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link activeFont" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link inactiveFont" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link inactiveFont" href="#">Lessons</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <button class="buttonYellow" type="">Quiz Me</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <a href="indexFullscreen.html">
-        <img class="screeners" title="Fullscreen" src="images/fullscreenWhite.png" alt="Fullscreen">
-    </a>
 
     <a-scene embedded arjs>
         <!-- Ambient light with intensity 3 -->
@@ -62,6 +32,10 @@
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
+
+    <a href="index.html">
+        <img class="screeners" src="images/minimizeWhite.png" title="Minimize" alt="Minimize">
+    </a>
 
     <!-- Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
