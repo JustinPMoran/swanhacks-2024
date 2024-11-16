@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Gibralt';
+    src: url('fonts/GibraltDEMO-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.logoNAV {
+    font-family: 'Gibralt', sans-serif;
+    font-weight: bold;
+    font-size: 5vh;
+    text-decoration: none;
+    color: black;
+}
+
+.blurred-nav {
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+.logoNAV:hover {
+    color: darkslategrey;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.a-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
