@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import 'aframe';
+import 'ar.js/aframe/build/aframe-ar.js';
+import 'aframe-extras';
 
 function App() {
+  useEffect(() => {
+    // Any additional setup can go here
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ margin: 0, overflow: 'hidden' }}>
+      <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+        <a-marker preset="hiro">
+          <a-entity 
+            gltf-model="#skeleton-model"
+            scale="7 7 7"
+            animation-mixer>
+          </a-entity>
+        </a-marker>
+        <a-assets>
+          <a-asset-item id="skeleton-model" src="./skellie2.0.glb"></a-asset-item>
+        </a-assets>
+        <a-entity camera></a-entity>
+      </a-scene>
     </div>
   );
 }
