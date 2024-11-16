@@ -1,6 +1,64 @@
 {
-    "Femur": {
-        "question": "What is the largest bone in the body?",
-        "answer": "Femur"
-    }
+    "skeleton": [
+        {
+            "question": "What is the largest bone in the body?",
+            "answer": "Femur"
+        },
+        {
+            "question": "How many bones are in the adult skeleton?",
+            "answer": "206"
+        }
+    ],
+    "skull": [
+        {
+            "question": "How many bones are in the skull?",
+            "answer": "22"
+        },
+        {
+            "question": "What bone in the skull can move?",
+            "answer": "Mandible"
+        }
+    ],
+    "ribcage": [
+        {
+            "question": "How many ribs does a human have?",
+            "answer": "24 ribs (12 pairs)"
+        },
+        {
+            "question": "What is the function of the ribcage?",
+            "answer": "The ribcage protects vital organs such as the heart and lungs."
+        },
+        {
+            "question": "What is the first rib connected to?",
+            "answer": "The first rib is connected to the sternum (breastbone) via cartilage."
+        }
+    ],
+    "spine": [
+        {
+            "question": "How many vertebrae are in the adult human spine?",
+            "answer": "26 vertebrae"
+        },
+        {
+            "question": "What are the regions of the spine?",
+            "answer": "The spine is divided into 5 regions: cervical, thoracic, lumbar, sacral, and coccygeal."
+        },
+        {
+            "question": "What is the function of the spine?",
+            "answer": "The spine provides structural support, protects the spinal cord, and allows for flexibility and movement."
+        }
+    ],
+    "vertebrae": [
+        {
+            "question": "How many types of vertebrae are there?",
+            "answer": "There are 5 types: cervical, thoracic, lumbar, sacral, and coccygeal vertebrae."
+        },
+        {
+            "question": "Which vertebrae supports the head?",
+            "answer": "The cervical vertebrae, particularly the first cervical vertebra (the atlas), supports the head."
+        },
+        {
+            "question": "What is the function of intervertebral discs?",
+            "answer": "Intervertebral discs act as shock absorbers between vertebrae and allow for flexibility in the spine."
+        }
+    ]
 }
