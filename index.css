@@ -28,18 +28,35 @@
 }
 
 .blurred-nav {
+    position: relative;
     background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
-  
-  .navbar {
-    position: fixed;
+    overflow: hidden;
+}
+
+.blurred-nav::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
-  }
+    bottom: 0;
+    filter: blur(10px);
+    margin: -20px;
+    background: inherit;
+    z-index: -1;
+}
+
+/* For browsers that support backdrop-filter */
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+    .blurred-nav {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    
+    .blurred-nav::before {
+        display: none;
+    }
+}
 
 .logoNAV:hover {
     color: darkslategrey;
