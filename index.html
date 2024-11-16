@@ -15,7 +15,9 @@
 <body style="margin: 0; overflow: hidden;">
     <nav class="navbar navbar-expand-lg navbar-light blurred-nav">
         <div class="container-fluid">
-            <a class="logoNAV" href="index.html">ARuLearning</a>
+            <img class="logoBox" src="images/image (2).png">
+            <!-- <a class="logoNAV logoNAV_B" href="index.html">AR</a><a class="logoNAV logoNAV_S" href="index.html">u</a><a class="logoNAV logoNAV_B" href="index.html">Learning</a> -->
+            <a class="logoNAV logoNAV_B" href="index.html">ARuLearning</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,12 +29,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Lessons</a>
                     </li>
-                    <li class="nav-item nav-list-button">
-                        <form class="d-flex" role="search">
-                            <button class="btn btn-outline-success" type="submit">Quiz Me</button>
-                        </form>
-                    </li>
                 </ul>
+                <form class="d-flex" role="search">
+                    <button class="buttonYellow" type="">Quiz Me</button>
+                </form>
             </div>
         </div>
     </nav>
@@ -46,38 +46,13 @@
 
         <a-marker preset="hiro">
             <a-asset-item id="model" src="assets/skellie2.0.glb"></a-asset-item>
-            <a-entity gltf-model="#model" scale="5 5 5" position="0 2 0"
-                material="color: #F5F5F5; metalness: 0.1; roughness: 0.8"></a-entity>
-
-            <a-text value="hiro" position= "0.5 1 0" rotation="-45 0 0"></a-text>
+            <a-entity 
+                gltf-model="#model" 
+                scale="7.5 7.5 7.5" 
+                position="0 2 0"
+                material="color: #F5F5F5; metalness: 0.1; roughness: 0.8"
+            ></a-entity>
         </a-marker>
-
-        <a-marker preset="kanji">
-            <a-entity gltf-model="#model" scale="7 7 7" position="0 2 0"
-                material="color: #F5F5F5; metalness: 0.1; roughness: 0.8"></a-entity>
-
-            <a-text value="kanji" position="1 1 1"></a-text>
-        </a-marker>
-
-        <a-marker preset="custom" type="pattern" url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-skeleton.patt">
-            <a-text value="Skeleton" position="1 1 1"></a-text>
-            <a-entity id="skull" gltf-model="assets/skull.glb" position="0 0 0" scale="0.5 0.5 0.5"></a-entity>
-    
-            <!-- <a-image src="skull.png"></a-image> -->
-        </a-marker>
-
-        <a-marker preset="custom" type="pattern" url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-axial.patt">
-            <a-text value="Axial" position="1 1 1"></a-text>
-            <a-entity id="skull" gltf-model="assets/dancing_skeleton.glb" position="0 0 0" scale="0.5 0.5 0.5"></a-entity>
-    
-        </a-marker>
-
-        
-        <!-- <a-marker preset="custom" type="pattern" url="https://your-website.com/path-to-your-marker/marker2.patt">
-            <a-entity position="0 0 0" gltf-model="url(model2.glb)" scale="0.2 0.2 0.2"></a-entity>
-        </a-marker> -->
-
-
         <a-entity camera></a-entity>
     </a-scene>
 
