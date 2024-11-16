@@ -4,7 +4,7 @@ const app = express();
 const PORT = 3000; // You can change the port if needed
 
 // Serve static files from the current directory (or specify a 'public' directory)
-app.use(express.static("/home/pnleguizamo/swanhacks-2024/Project"));
+app.use(express.static("C:/Users/legui/Documents/github/swanhacks-2024/Project"));
 
 // app.get('/', (req, res) => {
 //     res.sendFile(path.join(__dirname, 'my-ar-project', 'index.html'));
