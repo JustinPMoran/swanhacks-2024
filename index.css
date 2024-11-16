@@ -34,7 +34,7 @@
     font-size: 3vh !important;
     color: rgb(0, 0, 0);
     text-decoration: underline;
-    text-decoration-thickness: 0.5px;
+    text-decoration-thickness: 1.5px;
 }
 
 .logoNAV {
@@ -45,11 +45,11 @@
 }
 
 .logoNAV_B {
-    font-size: 5vh;
+    font-size: 45px;
 }
 
 .logoNAV_S {
-    font-size: 3vh;
+    font-size: 35px;
 }
 
 .logoBox {
