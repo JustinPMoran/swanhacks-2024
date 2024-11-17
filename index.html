@@ -28,7 +28,6 @@
 
 
                 this.el.addEventListener('markerFound', () => {
-                    console.log(this.el.id);
                     fetch('model_info.json')
                         .then(response => response.json())
                         .then(data => {
@@ -126,8 +125,6 @@
             <a-entity gltf-model="assets/bigwin.glb" position="0 0 0" scale="0.25 0.25 0.25"
             animation-mixer="clip: *; loop: true; timeScale: 1" rotation="-90 0 0">
 
-
-            <a-text value="hiro" position="0.5 1 0" rotation="-45 0 0"></a-text>
         </a-marker>
 
         <a-marker preset="kanji">
@@ -144,14 +141,12 @@
             animation="property: rotation; to: 0 360 0; dur: 10000; loop: true;">
                 
             </a-entity>
-
-            <!-- <a-image src="skull.png"></a-image> -->
         </a-marker>
 
         <a-marker id="ribcage" preset="custom" marker-handler type="pattern"
             url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-rib-cage.patt">
             <a-text value="Ribcage" position="0.8 1 0"></a-text>
-            <a-entity animation-mixer gltf-model="assets/ribcage.glb" position="0 0 0"
+            <a-entity animation-mixer gltf-model="assets/ribcage.glb" position="0 0 0" animation="property: rotation; to: 0 360 0; dur: 10000; loop: true;"
                 scale="0.03 0.03 0.03"></a-entity>
 
         </a-marker>
