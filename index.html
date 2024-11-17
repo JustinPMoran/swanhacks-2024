@@ -7,6 +7,7 @@
     <title>ARuLearning - [HOME]</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+    <script src="//cdn.8thwall.com/web/aframe/aframe-extras-7.2.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="index.css">
@@ -17,29 +18,29 @@
                 let timeoutId;
 
                 this.el.addEventListener('markerFound', () => {
-                console.log(this.el.id);
+                    console.log(this.el.id);
                     fetch('model_info.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        // Do something with the JSON data
-                        let model_info = data; 
-                        switch (this.el.id) {
-                            case "skeleton":
-                                seenText.innerText = model_info["Skeleton"];
-                                break;
-                            case "skull":
+                        .then(response => response.json())
+                        .then(data => {
+                            // Do something with the JSON data
+                            let model_info = data;
+                            switch (this.el.id) {
+                                case "skeleton":
+                                    seenText.innerText = model_info["Skeleton"];
+                                    break;
+                                case "skull":
                                     seenText.innerText = model_info["Skull"];
-                                break;
-                            case "ribcage":
+                                    break;
+                                case "ribcage":
                                     seenText.innerText = model_info["Ribcage"];
-                                break;
-                            case "spine":
+                                    break;
+                                case "spine":
                                     seenText.innerText = model_info["Spine"];
-                                break;
-                            default:
-                                seenText.textContent = "test";
-                        }
-                    });
+                                    break;
+                                default:
+                                    seenText.textContent = "test";
+                            }
+                        });
                     clearTimeout(timeoutId);
                     seenText.classList.add('visible');
                 });
@@ -98,9 +99,9 @@
         <a-light type="directional" color="#ffffff" intensity="3" position="-1 1 1"></a-light>
 
         <a-marker preset="hiro" marker-handler id="hiro">
-            <a-asset-item id="model" src="assets/skellie2.0.glb"></a-asset-item>
-            <a-entity gltf-model="#model" scale="5 5 5" position="0 2 0"
-                material="color: #F5F5F5; metalness: 0.1; roughness: 0.8"></a-entity>
+            <!-- <a-asset-item id="model" src="assets/skellie2.0.glb"></a-asset-item> -->
+            <a-entity gltf-model="assets/dancing_skeleton.glb" position="0 0 0" scale="0.5 0.5 0.5"
+            animation-mixer="clip: *; loop: true; timeScale: 1">
 
             <a-text value="hiro" position="0.5 1 0" rotation="-45 0 0"></a-text>
         </a-marker>
@@ -112,35 +113,36 @@
             <a-text value="kanji" position="1 1 1"></a-text>
         </a-marker>
 
-        <a-marker id = "skeleton" preset="custom" marker-handler type="pattern"
+        <a-marker id="skeleton" preset="custom" marker-handler type="pattern"
             url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-skeleton.patt">
             <a-text value="Skeleton" position="0.5 1 0"></a-text>
             <a-entity gltf-model="assets/skellie2.0.glb" position="0 0 0" scale="5 5 5"
-                animation="property: rotation; to: 0 360 0; dur: 10000; loop: true;">
+            animation="property: rotation; to: 0 360 0; dur: 10000; loop: true;">
+                
             </a-entity>
 
             <!-- <a-image src="skull.png"></a-image> -->
         </a-marker>
 
-        <a-marker id = "ribcage"  preset="custom" marker-handler type="pattern"
+        <a-marker id="ribcage" preset="custom" marker-handler type="pattern"
             url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-rib-cage.patt">
             <a-text value="Ribcage" position="0.8 1 0"></a-text>
-            <a-entity gltf-model="assets/ribcage.glb" position="0 0 0" scale="0.03 0.03 0.03"></a-entity>
+            <a-entity animation-mixer gltf-model="assets/ribcage.glb" position="0 0 0"
+                scale="0.03 0.03 0.03"></a-entity>
 
         </a-marker>
 
-        <a-marker id = "skull" preset="custom" marker-handler type="pattern"
+        <a-marker id="skull" preset="custom" marker-handler type="pattern"
             url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-skull.patt">
             <a-text value="Skull" position="0.5 1 0"></a-text>
-            <a-entity  gltf-model="assets/skull2.glb" position="0 0 0" scale="0.05 0.05 0.05"></a-entity>
+            <a-entity gltf-model="assets/skull2.glb" position="0 0 0" scale="0.05 0.05 0.05" animation="property: rotation; to: 0 360 0; dur: 10000; loop: true;"></a-entity>
 
         </a-marker>
 
-        <a-marker id = "spine" preset="custom" marker-handler type="pattern"
+        <a-marker id="spine" preset="custom" marker-handler type="pattern"
             url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-spine.patt">
             <a-text value="Spine" position="0.5 1 0"></a-text>
-            <a-entity gltf-model="assets/spine.glb" position="0 0 0"
-                scale="0.03 0.03 0.03"></a-entity>
+            <a-entity gltf-model="assets/spine.glb" position="0 0 0" scale="0.03 0.03 0.03"></a-entity>
 
         </a-marker>
 
