@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Gibralt';
+    src: url('fonts/GibraltDEMO-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.logoNAV {
+    font-family: 'Gibralt', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.logoNAV_B {
+    font-size: 5vh;
+}
+
+.logoNAV_S {
+    font-size: 3vh;
+}
+
+.logoBox {
+    width: 55px;
+    padding-right: 10px;
+
+}
+
+.blurred-nav {
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+.logoNAV:hover {
+    color: darkslategrey;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.a-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.buttonYellow {
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    outline: none;
+    font-weight: bolder;
+    border: solid 4px black;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+.buttonYellow:hover {
+    background-color: rgb(243, 180, 32);
+    color: white;
+    outline: none;
+    font-weight: bolder;
+    border: solid 4px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+}
