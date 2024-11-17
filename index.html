@@ -122,12 +122,10 @@
         <a-light type="directional" color="#ffffff" intensity="3" position="-1 1 1"></a-light>
 
         <a-marker preset="hiro" marker-handler id="hiro">
-            <a-asset-item id="model" src="assets/spooky_skeleton_dance_1.glb"></a-asset-item>
-            <a-entity gltf-model="#model" scale="5 5 5" position="0 2 0"
-                material="color: #F5F5F5; metalness: 0.1; roughness: 0.8">
-                <a-animation-mixer src="assets/spooky_skeleton_dance_1.glb" clip="*" loop="true" crossfade-duration="1">
-                </a-animation-mixer>
-            </a-entity>
+            <!-- <a-asset-item id="model" src="assets/skellie2.0.glb"></a-asset-item> -->
+            <a-entity gltf-model="assets/trust.glb" position="0 0 10" scale="0.25 0.25 0.25"
+            animation-mixer="clip: *; loop: true; timeScale: 1">
+
 
             <a-text value="hiro" position="0.5 1 0" rotation="-45 0 0"></a-text>
         </a-marker>
