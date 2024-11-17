@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>ARuLearning - [HOME]</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
@@ -16,6 +16,16 @@
             init: function () {
                 const seenText = document.getElementById('seenText');
                 let timeoutId;
+
+                //Audio Stuff Starts Here
+                const audioFiles = {
+                    "skeleton": "audio/skeleton1.mp3",
+                    "skull": "audio/skull1.mp3",
+                    "ribcage": "audio/ribcage1.mp3",
+                    "spine": "audio/spine1.mp3"
+                };
+                //Audio Stuff Ends Here
+
 
                 this.el.addEventListener('markerFound', () => {
                     console.log(this.el.id);
@@ -37,10 +47,23 @@
                                 case "spine":
                                     seenText.innerText = model_info["Spine"];
                                     break;
+                                case "hiro":
+                                    seenText.innerText = model_info["Hiro"];
+                                    break;
                                 default:
                                     seenText.textContent = "test";
                             }
-                        });
+                        })
+
+                    //Audio Stuff Starts Here
+                    const audioPath = audioFiles[this.el.id];
+                    if (audioPath) {
+                        const audio = new Audio(audioPath);
+                        audio.play();
+                    }
+                    //Audio Stuff Ends Here
+
+
                     clearTimeout(timeoutId);
                     seenText.classList.add('visible');
                 });
