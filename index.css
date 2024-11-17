@@ -20,6 +20,14 @@
     color: rgb(33, 33, 33);
 }
 
+.inactiveFont:hover {
+    font-family: 'GibraltEL', sans-serif;
+    font-size: 3vh !important;
+    color: rgb(33, 33, 33);
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+}
+
 .navbar-nav {
     margin: 0 auto;
 }
@@ -137,4 +145,18 @@
     border: solid 4px rgba(0, 0, 0, 0);
     border-radius: 10px;
     padding: 10px;
+}
+
+#seenText {
+    position:sticky;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    display: none;
+    z-index: 1000;
 }
