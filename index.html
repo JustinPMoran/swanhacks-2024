@@ -8,7 +8,8 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="index.css">
     <style>
         #seenOverlay {
@@ -65,6 +66,9 @@
                     <li class="nav-item">
                         <a class="nav-link inactiveFont" href="#">Lessons</a>
                     </li>
+                    <li class="nav-item">
+                        <button onclick = "hide()"> Hide </button>
+                    </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <button class="buttonYellow" type="">Quiz Me</button>
@@ -90,18 +94,57 @@
 
         <a-marker preset="hiro" marker-handler>
             <a-asset-item id="model" src="assets/skellie2.0.glb"></a-asset-item>
-            <a-entity 
-                gltf-model="#model" 
-                scale="7.5 7.5 7.5" 
-                position="0 2 0"
-                material="color: #F5F5F5; metalness: 0.1; roughness: 0.8"
-            ></a-entity>
+            <a-entity gltf-model="#model" scale="5 5 5" position="0 2 0"
+                material="color: #F5F5F5; metalness: 0.1; roughness: 0.8"></a-entity>
+
+            <a-text value="hiro" position="0.5 1 0" rotation="-45 0 0"></a-text>
         </a-marker>
+
+        <a-marker preset="kanji">
+            <a-entity gltf-model="#model" scale="7 7 7" position="0 2 0"
+                material="color: #F5F5F5; metalness: 0.1; roughness: 0.8"></a-entity>
+
+            <a-text value="kanji" position="1 1 1"></a-text>
+        </a-marker>
+
+        <a-marker preset="custom" type="pattern"
+            url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-skeleton.patt">
+            <a-text value="Skeleton" position="0.5 1 0"></a-text>
+            <a-entity  gltf-model="assets/skellie2.0.glb" position="0 0 0"
+                scale="5 5 5" animation="property: rotation; to: 0 360 0; dur: 10000; loop: true;"></a-entity>
+
+            <!-- <a-image src="skull.png"></a-image> -->
+        </a-marker>
+
+        <a-marker preset="custom" type="pattern"
+            url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-axial.patt">
+            <a-text value="Axial" position="1 1 1"></a-text>
+            <a-entity  gltf-model="assets/ribcage.glb" position="0 0 0"
+                scale="0.01 0.01 0.01"></a-entity>
+
+        </a-marker>
+
+        <a-marker preset="custom" type="pattern"
+            url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-spine.patt">
+            <a-text value="Spine" position="1 1 1"></a-text>
+            <a-entity  gltf-model="assets/the_human_spinal_column.glb" position="0 0 0"
+                scale="0.01 0.01 0.01"></a-entity>
+
+        </a-marker>
+
+
+        <!-- <a-marker preset="custom" type="pattern" url="https://your-website.com/path-to-your-marker/marker2.patt">
+            <a-entity position="0 0 0" gltf-model="url(model2.glb)" scale="0.2 0.2 0.2"></a-entity>
+        </a-marker> -->
+
+
         <a-entity camera></a-entity>
     </a-scene>
 
     <!-- Bootstrap JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
