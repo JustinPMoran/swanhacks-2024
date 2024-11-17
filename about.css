@@ -1,0 +1,125 @@
+.bodyBG {
+    background-image: url('images/R.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.cardN {
+    position: absolute;
+    top: 165px;
+    left: 80px;
+    right: 80px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.headingTXT {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    padding-top: 30px;
+    font-size: 80px;
+    color: #1d1d1f;
+    letter-spacing: -0.015em;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.pngSTUFF {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    width: calc(33.33% - 20px); /* 3 cards per row, accounting for margins */
+    margin: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    font-size: 30px;
+}
+
+.pngSTUFF p {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.pngSTUFF img {
+    max-width: 100%;
+    height: auto;
+}
+
+.space {
+    top: 850px !important;
+}
+
+/* For larger screens */
+@media screen and (min-width: 1025px) {
+    .pngSTUFF {
+        width: calc(33.33% - 20px);
+    }
+}
+
+/* For medium-sized screens */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .pngSTUFF {
+        width: calc(50% - 20px);
+    }
+}
+
+/* For smaller screens like tablets */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .pngSTUFF {
+        width: calc(50% - 20px);
+    }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 480px) {
+    .pngSTUFF {
+        width: calc(100% - 40px);
+    }
+}
+
+/* For iPhone or smaller devices */
+@media screen and (max-width: 767px) {
+    .headingTXT {
+        font-size: 9vw;
+    }
+
+    .cardN {
+        top: 120px;
+        left: 20px;
+        right: 20px;
+    }
+
+    .space {
+        top: 1050px !important;
+    }
+}
+
+
+.newSize {
+    font-size: 20px;
+    padding: 20px !important;
+}
+
+body {
+    margin-bottom: 1200px !important;
+}
