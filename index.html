@@ -116,7 +116,10 @@
             url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-skeleton.patt">
             <a-text value="Skeleton" position="0.5 1 0"></a-text>
             <a-entity gltf-model="assets/skellie2.0.glb" position="0 0 0" scale="5 5 5"
-                animation="property: rotation; to: 0 360 0; dur: 10000; loop: true;"></a-entity>
+                animation__rotate="property: rotation; to: 0 360 0; dur: 10000; loop: true;"
+                animation__move="property: position; to: 0 2 0; dir: alternate; dur: 1000; loop: true; easing: ease-in-out"
+                animation__scale="property: scale; to: 5 6 5; dir: alternate; dur: 500; loop: true; easing: ease-in-out">
+            </a-entity>
 
             <!-- <a-image src="skull.png"></a-image> -->
         </a-marker>
