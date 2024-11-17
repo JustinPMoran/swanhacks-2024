@@ -76,8 +76,76 @@ function displayResult() {
     retryButton.style.display = 'inline-block';
     showAnswerButton.style.display = 'inline-block';
     resultContainer.style.display = 'block';
-    resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
+
+    // Add Go Home button
+    const goHomeButton = document.createElement('button');
+    goHomeButton.id = 'goHome';
+    goHomeButton.className = 'btn btn-primary mt-3';
+    goHomeButton.textContent = 'Go Home';
+    goHomeButton.addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
+
+
+    // Show result and image
+    resultContainer.innerHTML = `
+        <h4 class="mb-3">You scored ${score} out of ${quizData.length}!</h4>
+        <h4 class="mb-3">You win the Learning Award!</h4>
+
+    `;
+
+    // Render leaderboard
+    renderLeaderboard();
+        // Append Go Home button
+    resultContainer.appendChild(goHomeButton);
+
 }
+
+function renderLeaderboard() {
+    const fakeLeaderboard = [
+        { name: "Alice", score: Math.floor(Math.random() * quizData.length) + 1 },
+        { name: "Bob", score: Math.floor(Math.random() * quizData.length) + 1 },
+        { name: "Charlie", score: Math.floor(Math.random() * quizData.length) + 1 },
+        { name: "You", score: score },
+        { name: "Diana", score: Math.floor(Math.random() * quizData.length) + 1 },
+    ];
+
+    // Sort leaderboard by scores in descending order
+    fakeLeaderboard.sort((a, b) => b.score - a.score);
+
+    // Create leaderboard table
+    let leaderboardHtml = `
+        <h5 class="mb-3">Leaderboard:</h5>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+
+    fakeLeaderboard.forEach((entry, index) => {
+        leaderboardHtml += `
+            <tr>
+                <td>${index + 1}</td>
+                <td>${entry.name}</td>
+                <td>${entry.score}</td>
+            </tr>
+        `;
+    });
+
+    leaderboardHtml += `
+            </tbody>
+        </table>
+    `;
+
+    // Append leaderboard to result container
+    resultContainer.innerHTML += leaderboardHtml;
+}
+
 
 function retryQuiz() {
     quizContainer.style.display = 'block';
@@ -118,6 +186,7 @@ function showAnswer() {
 
 submitButton.addEventListener('click', checkAnswers);
 retryButton.addEventListener('click', retryQuiz);
+
 showAnswerButton.addEventListener('click', showAnswer);
 
 loadQuiz();
