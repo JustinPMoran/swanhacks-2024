@@ -21,6 +21,7 @@
                     .then(data => {
                         // Do something with the JSON data
                         let model_info = data; 
+                        alert(this.el.id);
                         switch (this.el.id) {
                             case "hiro":
                                 seenText.textContent = model_info["Skeleton"];
