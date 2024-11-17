@@ -147,16 +147,40 @@
     padding: 10px;
 }
 
-#seenText {
-    position:sticky;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 18px;
-    display: none;
-    z-index: 1000;
-}
+
+    #seenOverlay {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 1000;
+        pointer-events: none;
+    }
+    #seenText {
+        font-weight: 500;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 15px;
+        font-size: 30px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        max-width: 80%;
+        max-height: 4.5em; /* Approximately 3 lines of text */
+        overflow-y: auto;
+        text-align: left;
+        pointer-events: auto;
+    }
+    
+    #seenText.visible {
+        opacity: 1;
+    }
+    #seenText::-webkit-scrollbar {
+        width: 6px;
+    }
+    #seenText::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 3px;
+    }
