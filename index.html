@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Project</title>
+    <title>ARuLearning - [HOME]</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -25,6 +25,15 @@
                         switch (this.el.id) {
                             case "hiro":
                                 seenText.innerText = model_info["Skeleton"];
+                                break;
+                            case "skull":
+                                    seenText.innerText = model_info["Skull"];
+                                break;
+                            case "ribcage":
+                                    seenText.innerText = model_info["Ribcage"];
+                                break;
+                            case "spine":
+                                    seenText.innerText = model_info["Spine"];
                                 break;
                             default:
                                 seenText.textContent = "test";
@@ -56,13 +65,13 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link activeFont" aria-current="page" href="#">Home</a>
+                        <a class="nav-link activeFont" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link inactiveFont" href="#">About</a>
+                        <a class="nav-link inactiveFont" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link inactiveFont" href="#">Lessons</a>
+                        <a class="nav-link inactiveFont" href="lessons.html">Lessons</a>
                     </li>
                 </ul>
                 <a href="quiz.html" class="tdn d-flex">
@@ -96,13 +105,13 @@
         </a-marker>
 
         <a-marker preset="kanji">
-            <a-entity gltf-model="#model" scale="7 7 7" position="0 2 0"
+            <a-entity gltf-model="#model" marker-handler scale="7 7 7" position="0 2 0"
                 material="color: #F5F5F5; metalness: 0.1; roughness: 0.8"></a-entity>
 
             <a-text value="kanji" position="1 1 1"></a-text>
         </a-marker>
 
-        <a-marker preset="custom" type="pattern"
+        <a-marker preset="custom" marker-handler type="pattern"
             url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-skeleton.patt">
             <a-text value="Skeleton" position="0.5 1 0"></a-text>
             <a-entity gltf-model="assets/skellie2.0.glb" position="0 0 0" scale="5 5 5"
@@ -111,21 +120,21 @@
             <!-- <a-image src="skull.png"></a-image> -->
         </a-marker>
 
-        <a-marker preset="custom" type="pattern"
+        <a-marker preset="custom" marker-handler type="pattern"
             url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-rib-cage.patt">
             <a-text value="Ribcage" position="1 1 1"></a-text>
             <a-entity gltf-model="assets/ribcage.glb" position="0 0 0" scale="0.01 0.01 0.01"></a-entity>
 
         </a-marker>
 
-        <a-marker preset="custom" type="pattern"
+        <a-marker preset="custom" marker-handler type="pattern"
             url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-skull.patt">
             <a-text value="Skull" position="1 1 1"></a-text>
             <a-entity  gltf-model="assets/skull2.glb" position="0 0 0" scale="0.1 0.1 0.1"></a-entity>
 
         </a-marker>
 
-        <a-marker preset="custom" type="pattern"
+        <a-marker preset="custom" marker-handler type="pattern"
             url="https://raw.githubusercontent.com/justinpmoran/swanhacks-2024/main/markers/pattern-spine.patt">
             <a-text value="Spine" position="1 1 1"></a-text>
             <a-entity gltf-model="assets/spine.glb" position="0 0 0"
