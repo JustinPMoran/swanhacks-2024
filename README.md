@@ -20,3 +20,13 @@
 
 ## About SwanHacks 2024
 Swan Hacks 2024 is a 24-hour hackathon at Iowa State University on November 16-17. Students collaborate to create education-focused tech projects, competing for prizes. The event promotes innovation, learning, and social impact, offering a platform for coding enthusiasts to showcase their skills and creativity.
+
+## Documentation
+![image 1](https://github.com/JustinPMoran/swanhacks-2024/blob/main/Documentation/1.png)
+![image 2](https://github.com/JustinPMoran/swanhacks-2024/blob/main/Documentation/2.png)
+![image 3](https://github.com/JustinPMoran/swanhacks-2024/blob/main/Documentation/3.png)
+![image 4](https://github.com/JustinPMoran/swanhacks-2024/blob/main/Documentation/4.png)
+![image 5](https://github.com/JustinPMoran/swanhacks-2024/blob/main/Documentation/5.png)
+![image 6](https://github.com/JustinPMoran/swanhacks-2024/blob/main/Documentation/6.png)
+![image 7](https://github.com/JustinPMoran/swanhacks-2024/blob/main/Documentation/7.png)
+![image 8](https://github.com/JustinPMoran/swanhacks-2024/blob/main/Documentation/8.png)
