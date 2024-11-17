@@ -1,3 +1,12 @@
+
+// @author ARuLearning
+
+// This is the JS for the Quiz page. 
+// The quiz.js is used to generate the
+// quiz based on how many questions are in
+// the given JSON file
+
+
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');
 const submitButton = document.getElementById('submit');

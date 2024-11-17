@@ -1,3 +1,12 @@
+/* 
+
+@author ARuLearning
+
+This is the CSS for the Index page, as well as the header. 
+Formatted to work on different screen sizes
+
+*/
+
 @font-face {
     font-family: 'Gibralt';
     src: url('fonts/GibraltDEMO-Bold.otf') format('opentype');
