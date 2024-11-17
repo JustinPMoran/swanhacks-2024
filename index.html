@@ -16,6 +16,20 @@
                 const seenText = document.getElementById('seenText');
                 let timeoutId;
 
+                fetch('model_info.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Do something with the JSON data
+                        let model_info = data; 
+                        switch (this.el.id) {
+                            case "hiro":
+                                seenText.textContent = model_info["Skeleton"];
+                                break;
+                            default:
+                                seenText.textContent = "";
+                        }
+                    })
+
                 this.el.addEventListener('markerFound', () => {
                     clearTimeout(timeoutId);
                     seenText.classList.add('visible');
@@ -82,7 +96,7 @@
         <!-- Directional light with intensity 3 -->
         <a-light type="directional" color="#ffffff" intensity="3" position="-1 1 1"></a-light>
 
-        <a-marker preset="hiro" marker-handler>
+        <a-marker preset="hiro" marker-handler id="hiro">
             <a-asset-item id="model" src="assets/skellie2.0.glb"></a-asset-item>
             <a-entity gltf-model="#model" scale="5 5 5" position="0 2 0"
                 material="color: #F5F5F5; metalness: 0.1; roughness: 0.8"></a-entity>
