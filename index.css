@@ -16,14 +16,11 @@
 
 .inactiveFont {
     font-family: 'GibraltEL', sans-serif;
-    font-size: 3vh !important;
-    color: rgb(33, 33, 33);
+    font-size: 26px !important;
+    color: rgb(0, 0, 0);
 }
 
 .inactiveFont:hover {
-    font-family: 'GibraltEL', sans-serif;
-    font-size: 3vh !important;
-    color: rgb(33, 33, 33);
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
 }
@@ -39,7 +36,7 @@
 
 .activeFont {
     font-family: 'GibraltEL', sans-serif;
-    font-size: 3vh !important;
+    font-size: 26px !important;
     color: rgb(0, 0, 0);
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
@@ -53,7 +50,7 @@
 }
 
 .logoNAV_B {
-    font-size: 45px;
+    font-size: 42px;
 }
 
 .logoNAV_S {
@@ -147,7 +144,7 @@
     color: white;
     outline: none;
     font-weight: bolder;
-    border: solid 4px rgba(0, 0, 0, 0);
+    border: solid 2px rgba(0, 0, 0, 0);
     border-radius: 10px;
     padding: 10px;
 }
