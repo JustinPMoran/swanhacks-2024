@@ -1,3 +1,14 @@
+/* 
+
+@author ARuLearning
+
+This is the CSS for the About page. 
+Formatted to work on different screen sizes
+
+*/
+
+
+
 .bodyBG {
     background-image: url('images/R.jpg');
     background-size: cover;
