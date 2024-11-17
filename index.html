@@ -24,10 +24,10 @@
                     .then(data => {
                         // Do something with the JSON data
                         let model_info = data; 
-                        alert(this.el.id);
+                        alert(this.el.id + " " + model_info["Skeleton"]);
                         switch (this.el.id) {
                             case "hiro":
-                                seenText.textContent = model_info["Skeleton"];
+                                seenText.innerText = model_info["Skeleton"];
                                 break;
                             default:
                                 seenText.textContent = "test";
