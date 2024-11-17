@@ -16,7 +16,10 @@
                 const seenText = document.getElementById('seenText');
                 let timeoutId;
 
-                fetch('model_info.json')
+                this.el.addEventListener('markerFound', () => {
+                    clearTimeout(timeoutId);
+                    seenText.classList.add('visible');
+                    fetch('model_info.json')
                     .then(response => response.json())
                     .then(data => {
                         // Do something with the JSON data
@@ -30,10 +33,6 @@
                                 seenText.textContent = "";
                         }
                     })
-
-                this.el.addEventListener('markerFound', () => {
-                    clearTimeout(timeoutId);
-                    seenText.classList.add('visible');
                 });
 
                 this.el.addEventListener('markerLost', () => {
